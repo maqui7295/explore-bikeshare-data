@@ -92,7 +92,7 @@ plotTopN <- function(SS, city, n) {
   ggplot(df[1:n, ], 
          aes(x=reorder(station, SS), y=SS, label=SS, fill=station, color=station)) + 
     geom_col() +
-    # push the data lavbels to the top of the bars and make them black
+    # push the data labels to the top of the bars and make them black
     geom_text(nudge_y = 1, color="black") +
     labs(title = paste("Top", n, "start stations in", city), 
          x="", y="count") + theme_bw() +
